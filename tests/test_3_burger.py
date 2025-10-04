@@ -4,7 +4,7 @@ from pages.login import LoginPages
 from pages.dashboard import DashboardPages
 
 
-@allure.story('5 Click logout of burger menu')
+@allure.story('8 Click logout of burger menu')
 def test_click_logout(browser):    
     login = LoginPages(browser)
     dashboard = DashboardPages(browser)
@@ -21,7 +21,7 @@ def test_click_logout(browser):
         burger.click_logout_menu()
         assert burger.check_click_logout()
 
-@allure.story('6 Click About link and Verify direct url')
+@allure.story('9 Click About link and Verify direct url')
 def test_click_about_link(browser):
     login = LoginPages(browser)
     dashboard = DashboardPages(browser)
