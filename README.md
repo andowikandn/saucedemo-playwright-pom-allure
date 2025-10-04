@@ -25,7 +25,7 @@ Activation virtual environment
 source env_name/bin/activate
 ```
 
-Install Selenium
+Install Playwright
 ```bash
 pip3 install playwright
 playwright install
