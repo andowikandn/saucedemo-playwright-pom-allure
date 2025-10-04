@@ -134,4 +134,3 @@ def test_checkout_then_cancel(browser):
 
     with allure.step('Verify back to dashboard'):
         assert dashboard.check_login_dashboard()
-        
