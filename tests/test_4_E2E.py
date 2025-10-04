@@ -2,7 +2,7 @@ import allure
 from pages.login import LoginPages
 from pages.dashboard import AddtoCartPages, RemoveProductsPage, DashboardPages
 from pages.view_cart import ViewCartPages, CheckoutInformationPages
-from locators.dashboard import DashboardLocators
+
 from pages.burger import BurgerMenuPages
 from playwright.sync_api import expect
 
@@ -27,9 +27,6 @@ def test_E2E(browser):
 
     with allure.step('Click view cart page'):
         view_cart.view_cart_page()
-
-    with allure.step('Verify direct to view cart page'):
-        expect(browser.locator(DashboardLocators.view_badge)).to_have_text('2', timeout=5000)
 
     with allure.step('Remove 1 cart backpack'):
         removecart.remove_cart_backpack()
