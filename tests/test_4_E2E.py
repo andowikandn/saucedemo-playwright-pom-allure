@@ -2,9 +2,9 @@ import allure
 from pages.login import LoginPages
 from pages.dashboard import AddtoCartPages, RemoveProductsPage, DashboardPages
 from pages.view_cart import ViewCartPages, CheckoutInformationPages
-
 from pages.burger import BurgerMenuPages
 from playwright.sync_api import expect
+
 
 @allure.story('10 View Cart Page')
 def test_E2E(browser):
@@ -73,7 +73,6 @@ def test_E2E(browser):
         dashboard.click_burger_menu()
         burger.click_logout_menu()
         assert burger.check_click_logout()
-        # sleep(2)
 
 @allure.story('11 Click checkout then cancel button')
 def test_view_cart_then_cancel(browser):
