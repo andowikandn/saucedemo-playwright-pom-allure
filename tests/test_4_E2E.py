@@ -6,7 +6,7 @@ from locators.dashboard import DashboardLocators
 from pages.burger import BurgerMenuPages
 from playwright.sync_api import expect
 
-@allure.story('8 View Cart Page')
+@allure.story('10 View Cart Page')
 def test_E2E(browser):
     login = LoginPages(browser)
     addtocart = AddtoCartPages(browser)
@@ -78,7 +78,7 @@ def test_E2E(browser):
         assert burger.check_click_logout()
         # sleep(2)
 
-@allure.story('9 Click checkout then cancel button')
+@allure.story('11 Click checkout then cancel button')
 def test_view_cart_then_cancel(browser):
     login = LoginPages(browser)
     addtocart = AddtoCartPages(browser)
@@ -100,7 +100,7 @@ def test_view_cart_then_cancel(browser):
     with allure.step('Back to your cart page'):
         assert view_cart.direct_to_view_cart_page()
 
-@allure.story('10 Click continue then cancel button')
+@allure.story('12 Click continue then cancel button')
 def test_checkout_then_cancel(browser):
     login = LoginPages(browser)
     addtocart = AddtoCartPages(browser)
