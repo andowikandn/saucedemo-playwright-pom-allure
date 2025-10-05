@@ -3,8 +3,6 @@ from pages.login import LoginPages
 from pages.dashboard import AddtoCartPages, RemoveProductsPage, DashboardPages
 from pages.view_cart import ViewCartPages, CheckoutInformationPages
 from pages.burger import BurgerMenuPages
-from playwright.sync_api import expect
-
 
 @allure.story('10 View Cart Page')
 def test_E2E(browser):
@@ -49,9 +47,9 @@ def test_E2E(browser):
         assert view_cart.check_checkout_page()
 
     with allure.step('Fill checkout information'):
-        overview.input_first_name('asd')
-        overview.input_last_name('asd')
-        overview.input_zip_code('asd')
+        overview.input_first_name('1st Name')
+        overview.input_last_name('2nd Name')
+        overview.input_zip_code('12345')
 
     with allure.step('Click continue'):
         overview.click_continue()
