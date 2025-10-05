@@ -8,9 +8,3 @@ class DashboardLocators:
     view_badge = '.shopping_cart_badge'
     product_sorting = '[data-test="product-sort-container"]'
     view_cart_link = '.shopping_cart_badge'
-
-class SortLocators:
-    sort_by_za = '[data-test="Test.allTheThings() T-Shirt (Red)"]'
-    sort_by_az = '[data-test="Sauce Labs Backpack"]'
-    sort_by_lohi = '[data-test="$7.99"]'
-    sort_by_hilo = '[data-test=="$49.99"]'
