@@ -1,5 +1,5 @@
 import allure
-from locators.dashboard import DashboardLocators, SortLocators
+from locators.dashboard import DashboardLocators
 from locators.burger import BurgerMenuLocators
 from playwright.sync_api import expect
 
@@ -80,19 +80,6 @@ class AddtoCartPages:
 class RemoveProductsPage:
     def __init__(self, page):
         self.page = page
-
-    @allure.step('Add to Cart Backpack')
-    def add_to_cart_backpack(self):
-        self.page.click(DashboardLocators.add_to_cart_backpack)
-
-    @allure.step('Add to Cart Jacket')
-    def add_to_cart_jacket(self):
-        self.page.click(DashboardLocators.add_to_cart_jacket)
-
-    @allure.step('View badge cart')
-    def check_view_badge(self):
-        expect(self.page.locator(DashboardLocators.view_badge)).to_be_visible()
-        return True
 
     @allure.step('Remove cart backpack')
     def remove_cart_backpack(self):
