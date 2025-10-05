@@ -18,7 +18,7 @@ class ViewCartPages:
     
     @allure.step('View badge cart')
     def check_view_badge_count(self, expected_count):
-        expect(self.page.locator(DashboardLocators.view_badge)).to_have_text(expected_count) #, timeout=5000)
+        expect(self.page.locator(DashboardLocators.view_badge)).to_have_text(expected_count)
         return True
     
     @allure.step('Continue shopping')
